@@ -2,6 +2,7 @@
   "name": "文冬",
   "short_name": "文冬农友天气",
   "description": "Bentong 文冬 — farm weather forecast / 个人化农友天气预报",
+  "id": "/weathernextforbentong/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

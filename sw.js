@@ -1,9 +1,9 @@
 // ============================================================
 // WeatherNext Service Worker
-// Version 1.0.155 — two-phase share + single link + html2canvas guard + Firebase SW fix. bump CACHE_VERSION on each release
+// Version 1.0.156 — launch-icon fix: removed duplicate inline apple-touch-icon, install banner uses real icon file, unique manifest id + 文冬-specific iOS title tags. bump CACHE_VERSION on each release
 // ============================================================
 
-const CACHE_VERSION = 'wnext-weathernextforbentong-202605280130';
+const CACHE_VERSION = 'wnext-weathernextforbentong-202606020001';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const WEATHER_CACHE = `${CACHE_VERSION}-weather`;
