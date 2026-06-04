@@ -12,7 +12,7 @@
 // (IDs preserved: 6 c_jk- + 5 c_bt-), seed version bt-arch1. bump CACHE_VERSION on each release
 // ============================================================
 
-const CACHE_VERSION = 'wnext-weathernextforbentong-202606032140';
+const CACHE_VERSION = 'wnext-weathernextforbentong-202606041239';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const WEATHER_CACHE = `${CACHE_VERSION}-weather`;
