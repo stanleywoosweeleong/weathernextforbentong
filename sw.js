@@ -10,9 +10,32 @@
 // match the farmers/blue-sky icon. Identity: namespace weathernextforbentong,
 // appId wnext-ag-v41-weathernextforbentong, name 文冬, 11 seed farms
 // (IDs preserved: 6 c_jk- + 5 c_bt-), seed version bt-arch1. bump CACHE_VERSION on each release
+// ------------------------------------------------------------
+// BROADCAST CLARITY PORT (from Raub v1.3.0–v1.3.14, applied 2026-06-05):
+// the WhatsApp broadcast text builder (buildBroadcastText) was replaced wholesale
+// with the refined Raub version. This REGIONAL Bentong build's identity is
+// UNCHANGED — weathernextforbentong namespace, appId wnext-ag-v41-weathernextforbentong,
+// name 文冬, 11 seed farms (6 c_jk- + 5 c_bt-), seed version bt-arch1, and the
+// build's GPS sort are all preserved exactly. (Distinct from the separate
+// weatherforbentongteam COMPANY build.) Only the broadcast text logic was swapped
+// (function body verified against the pre-fix baseline, zero build-specific drift).
+// Fixes carried over:
+//   • Fog tag gated to the broadcast window (no warning about an already-past dawn)
+//   • Fog rendered in the location's language + Malay, never the greeting choice
+//   • Fog tag placed BEFORE the afternoon storm clause (dawn→afternoon order)
+//   • Favourites day-1 capped at 23:00 (no double-listing tomorrow's small hours)
+//   • Afternoon midnight-crossover note ("12am 之后为明天预报")
+//   • 🌫️ and 🕛 emoji removed (blank-box on older device OSes); 📍 kept
+//   • Single-language Malay hourly labels now render in Malay
+//   • Thin-rain reconciliation ("可能有丝丝细雨 / Possible drizzle / Mungkin hujan
+//     merintik-rintik") instead of a contradictory "no rain"
+//   • Confidence marker states WHAT models agree on ("模型一致：很可能有雨 / 大致无雨")
+//   • Contradiction sweep: past-storm suppression, probability floored to the
+//     measurable-hour signal, trace tag suppressed when a real rain hour exists
+// bump CACHE_VERSION on each release
 // ============================================================
 
-const CACHE_VERSION = 'wnext-weathernextforbentong-202606041239';
+const CACHE_VERSION = 'wnext-weathernextforbentong-202606052330';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 const WEATHER_CACHE = `${CACHE_VERSION}-weather`;
